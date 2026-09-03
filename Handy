@@ -1,0 +1,13 @@
+#Transaction Id Automation
+def TransactionID(id):
+  base = 'WB'
+  base_num = [0,0,0,0,0,0,0]
+  new = str(id)
+  count = -1
+
+  for char in new:
+    base_num[count] = new[count]
+    count -= 1
+  
+  transId = f'WB{base_num[0]}{base_num[1]}{base_num[2]}{base_num[3]}{base_num[4]}{base_num[5]}{base_num[6]}'
+  return transId
